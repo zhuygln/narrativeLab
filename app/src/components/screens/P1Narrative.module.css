@@ -1,0 +1,201 @@
+.container {
+  height: 100dvh;
+  width: 100%;
+  overflow-y: auto;
+  padding: var(--space-lg) var(--space-md);
+  -webkit-overflow-scrolling: touch;
+}
+
+/* ── Header ── */
+.header {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+  padding-top: var(--space-md);
+}
+.label {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--color-narrative);
+}
+.sources {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin-top: var(--space-xs);
+}
+
+/* ── Timeline ── */
+.timeline {
+  position: relative;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding-left: var(--space-xl);
+}
+
+.timelineItem {
+  position: relative;
+  padding-bottom: var(--space-xl);
+}
+
+/* Vertical spine connecting nodes */
+.spine {
+  position: absolute;
+  left: 8px;
+  top: 20px;
+  bottom: 0;
+  width: 2px;
+  background: var(--color-border);
+}
+
+/* ── Event node ── */
+.eventNode {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  background: none;
+  border: none;
+  text-align: left;
+  width: 100%;
+  color: var(--color-text);
+  padding: var(--space-sm) 0;
+}
+.eventDot {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--color-event);
+  margin-top: 2px;
+  position: relative;
+  left: calc(-1 * var(--space-xl) + 1px);
+  box-shadow: 0 0 0 3px var(--color-background);
+}
+.eventContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+.eventDate {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.eventTitle {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+}
+.eventSummary {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--color-text);
+  margin-top: var(--space-xs);
+}
+.eventSource {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: var(--color-accent);
+  margin-top: var(--space-xs);
+}
+.eventSource:hover {
+  text-decoration: underline;
+}
+
+/* ── Force node (branches off timeline) ── */
+.forceNode {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: none;
+  border: none;
+  text-align: left;
+  color: var(--color-text);
+  padding: var(--space-xs) 0 var(--space-xs) var(--space-xl);
+  margin-left: var(--space-md);
+  border-left: 2px dashed var(--color-force);
+}
+.forceDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-force);
+  position: relative;
+  left: calc(-1 * var(--space-xl) - 6px);
+}
+.forceLabel {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-force);
+}
+.forceMeta {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+/* ── Gap node ── */
+.gapNode {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: none;
+  border: 1px dashed var(--color-gap);
+  border-radius: var(--radius-md);
+  text-align: left;
+  color: var(--color-text);
+  padding: var(--space-md);
+  margin-top: var(--space-md);
+  width: 100%;
+}
+.gapDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  background: var(--color-gap);
+  margin-bottom: var(--space-xs);
+}
+.gapLabel {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-gap);
+}
+.gapMeta {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin-top: var(--space-xs);
+}
+.gapResolution {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+/* ── Footer: assertions & omissions ── */
+.footer {
+  max-width: var(--max-width);
+  margin: var(--space-xl) auto var(--space-3xl);
+  padding: var(--space-lg);
+  border-top: 1px solid var(--color-border);
+}
+.footer h3 {
+  font-size: 0.95rem;
+  margin-bottom: var(--space-sm);
+  color: var(--color-narrative);
+}
+.assertions,
+.omissions {
+  list-style: disc;
+  padding-left: var(--space-lg);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+.assertions li + li,
+.omissions li + li {
+  margin-top: var(--space-xs);
+}
+.omissionsHeading {
+  margin-top: var(--space-lg);
+  color: var(--color-text-muted) !important;
+}
+.omissions li {
+  color: var(--color-text-muted);
+}
