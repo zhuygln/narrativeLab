@@ -32,11 +32,11 @@ The primary user experience is designed as a mobile-first, highly fluid "flashca
 - **Content**:
   - Highlights the specific narrative's perspective.
   - **Interactive Story Graph (Vertical Timeline)**: A fully interactive visual map (built with a library like React Flow) that flows from top to bottom. Users can tap/click on individual dots (Events, Forces, Evidence) to trigger the "3-level reveal" (Glance -> Context -> Evidence) and see the relationships that support *this* specific narrative.
-- **Navigation** (P1L, P1, and P1R form a horizontal row connected by left/right swipes):
+- **Navigation** (P1L, P1, and P1R form a circular horizontal ring connected by left/right swipes):
   - **Swipe Up**: Returns to P0.
   - **Swipe Down**: Enters the deep-dive chat mode (P2).
-  - **P1L — Swipe Right**: Returns to P1.
-  - **P1R — Swipe Left**: Returns to P1.
+  - **P1L — Swipe Right**: Goes to P1. **Swipe Left**: Goes to P1R.
+  - **P1R — Swipe Left**: Goes to P1. **Swipe Right**: Goes to P1L.
 
 ### P2: The Deep Dive (Contextual Chat)
 *Accessed by swiping down from P1, P1L, or P1R.*

@@ -48,7 +48,7 @@ P0 (Entry) → Submit/Lucky → P1
 
 - **P0**: Minimalist search (text/URL/audio input) + "I'm Feeling Lucky" + history drawer
 - **P1**: Full-screen flashcard with summary image and neutral text
-- **P1L/P1R**: Interactive story graphs with 3-level node reveal (Glance → Context → Evidence). P1L ↔ P1 ↔ P1R connected left/right; all swipe up → P0, swipe down → P2
+- **P1L/P1R**: Interactive story graphs with 3-level node reveal (Glance → Context → Evidence). P1L ↔ P1 ↔ P1R form a circular ring (left/right swipes wrap around); all swipe up → P0, swipe down → P2
 - **P2**: Contextual chat grounded in the narrative graph data
 
 ### Design System (Warm Editorial)
