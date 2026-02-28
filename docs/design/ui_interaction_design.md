@@ -32,10 +32,14 @@ The primary user experience is designed as a mobile-first, highly fluid "flashca
 - **Content**:
   - Highlights the specific narrative's perspective.
   - **Interactive Story Graph (Vertical Timeline)**: A fully interactive visual map (built with a library like React Flow) that flows from top to bottom. Users can tap/click on individual dots (Events, Forces, Evidence) to trigger the "3-level reveal" (Glance -> Context -> Evidence) and see the relationships that support *this* specific narrative.
-- **Navigation**: Swiping back left/right returns to P1 or moves to the other narrative.
+- **Navigation**:
+  - **Swipe Up**: Returns to P1.
+  - **Swipe Down**: Enters the deep-dive chat mode (P2).
+  - **P1L — Swipe Left**: Crosses over to P1R (Narrative B).
+  - **P1R — Swipe Right**: Crosses over to P1L (Narrative A).
 
 ### P2: The Deep Dive (Contextual Chat)
-*Accessed by scrolling down from P1.*
+*Accessed by scrolling down from P1, P1L, or P1R.*
 - **Concept**: A dedicated chat interface anchored to the specific story explored in P1.
 - **Interaction**: Users can ask contextual questions ("Why did actor X do this?", "What happened previously?"). The AI responds using the constructed narrative graph as ground truth.
 - **Continuity**: This session is saved and can be accessed later via the history menu on P0.

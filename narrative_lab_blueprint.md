@@ -65,6 +65,11 @@ The core interaction is a mobile-first, gesture-driven flow designed for rapid p
 - **Concept**: Swiping left or right reveals completely different, competing organizational frames of the same event.
 - **Interaction**: Fully interactive **Story Graphs** with a vertical timeline flow (top to bottom). Each graph presents the same events through a different narrative lens, differentiated by content rather than layout orientation.
 - Graph nodes (Events, Forces) trigger the 3-level reveal (Title -> Summary -> Source Link) when tapped.
+- **Navigation**:
+  - Swipe Up: Return to P1.
+  - Swipe Down: Enter Deep Dive Chat (P2).
+  - P1L — Swipe Left: Cross over to P1R.
+  - P1R — Swipe Right: Cross over to P1L.
 
 ### P2 (Deep Dive Chat)
 - A contextual chat interface (similar to ChatGPT) where the user asks contextual follow-up questions explicitly grounded in the data structure defined in P1.
