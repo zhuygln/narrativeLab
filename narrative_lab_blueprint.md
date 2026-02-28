@@ -63,9 +63,7 @@ The core interaction is a mobile-first, gesture-driven flow designed for rapid p
 
 ### P1L & P1R (Perspective Shift / Story Graphs)
 - **Concept**: Swiping left or right reveals completely different, competing organizational frames of the same event.
-- **Interaction**: Fully interactive **Story Graphs**. 
-  - **P1L**: Vertical Timeline Flow (top to bottom).
-  - **P1R**: Horizontal Timeline Flow (left to right).
+- **Interaction**: Fully interactive **Story Graphs** with a vertical timeline flow (top to bottom). Each graph presents the same events through a different narrative lens, differentiated by content rather than layout orientation.
 - Graph nodes (Events, Forces) trigger the 3-level reveal (Title -> Summary -> Source Link) when tapped.
 
 ### P2 (Deep Dive Chat)

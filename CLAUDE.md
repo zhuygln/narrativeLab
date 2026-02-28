@@ -36,7 +36,7 @@ Mobile-first, gesture-driven navigation across 5 screens:
 ```
 P0 (Entry) → P1 (Summary Card)
                 ├── Swipe Left  → P1L (Narrative A: vertical timeline graph)
-                ├── Swipe Right → P1R (Narrative B: horizontal timeline graph)
+                ├── Swipe Right → P1R (Narrative B: vertical timeline graph)
                 └── Scroll Down → P2  (Deep Dive Chat)
 ```
 

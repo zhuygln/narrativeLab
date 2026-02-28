@@ -43,8 +43,8 @@ graph LR
 <!-- slide -->
 ### P1R — Narrative B: Economic Competition
 ![P1R Narrative B](/Users/yonglinzhu/research/narrativeLab/docs/wireframes/wireframe_p1r_v3_1772228826741.png)
-- Story Graph with a clear horizontal **timeline flow** (left to right)
-- Different narrative framing of the same events along the time axis
+- Story Graph with a clear vertical **timeline flow** (top to bottom)
+- Different narrative framing of the same events, differentiated by content
 - Swipe left → back to P1
 <!-- slide -->
 ### P2 — Deep Dive Chat
