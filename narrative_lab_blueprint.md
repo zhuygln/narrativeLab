@@ -73,6 +73,7 @@ The core interaction is a mobile-first, gesture-driven flow designed for rapid p
 
 ### P2 (Deep Dive Chat)
 - A contextual chat interface (similar to ChatGPT) where the user asks contextual follow-up questions explicitly grounded in the data structure defined in P1.
+- **Navigation**: Swipe Up returns to P1 (Summary Card).
 
 ### Design System (Warm Editorial)
 - **Background**: Cream / Ivory (`#FAF7F2`).

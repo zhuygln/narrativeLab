@@ -43,6 +43,8 @@ The primary user experience is designed as a mobile-first, highly fluid "flashca
 - **Concept**: A dedicated chat interface anchored to the specific story explored in P1.
 - **Interaction**: Users can ask contextual questions ("Why did actor X do this?", "What happened previously?"). The AI responds using the constructed narrative graph as ground truth.
 - **Continuity**: This session is saved and can be accessed later via the history menu on P0.
+- **Navigation**:
+  - **Swipe Up**: Returns to P1 (Summary Card).
 
 ## Interaction Paradigms
 - **Flashcard Physics**: Transitions between P0, P1, and P1L/R should feel snappy, with spring-like physics typical of modern mobile OS cards (e.g., iOS app switcher or TikTok feed).
