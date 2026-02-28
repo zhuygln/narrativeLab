@@ -31,7 +31,10 @@ The primary user experience is designed as a mobile-first, highly fluid "flashca
 - **Visual**: Another full-screen flashcard.
 - **Content**:
   - Highlights the specific narrative's perspective.
-  - **Interactive Story Graph (Vertical Timeline)**: A fully interactive visual map (built with a library like React Flow) that flows from top to bottom. Users can tap/click on individual dots (Events, Forces, Evidence) to trigger the "3-level reveal" (Glance -> Context -> Evidence) and see the relationships that support *this* specific narrative.
+  - **Interactive Story Graph (Vertical Timeline)**: A fully interactive visual map (built with a library like React Flow) that flows from top to bottom. Users can tap/click on individual nodes (Events, Forces, Evidence) to trigger the **3-level reveal** and see the relationships that support *this* specific narrative:
+    1. **Glance** → `title` (short label shown on the graph node)
+    2. **Context** → `summary_short` (single-sentence overview on tap)
+    3. **Evidence** → `source_url` (link to original source on second tap)
 - **Navigation** (P1L, P1, and P1R form a circular horizontal ring connected by left/right swipes):
   - **Swipe Up**: Returns to P0.
   - **Swipe Down**: Enters the deep-dive chat mode (P2).

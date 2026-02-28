@@ -18,22 +18,30 @@ Our "Story Graph Engine" is built on the following ontology:
 ### `Event` (The Atomic Fact)
 - `id`: UUID
 - `timestamp`: ISO8601
-- `title`: Short label for the graph dot.
-- `summary_short`: Single-sentence overview (hover state).
-- `summary_expanded`: Detailed context (click/panel state).
-- `source_url`: Link to original evidence.
+- `title`: Short label for the graph dot (3-level reveal: **Glance**).
+- `summary_short`: Single-sentence overview (3-level reveal: **Context**).
+- `summary_expanded`: Detailed context and analysis (expanded panel).
+- `source_url`: Link to original evidence (3-level reveal: **Evidence**).
+- `location`: GeoJSON or EntityID (optional).
+- `actors`: List of EntityIDs (optional).
+- `evidence`: List of links/references (optional, supplements `source_url`).
 
 ### `Structural Force` (The Context)
 - `category`: (Economic, Demographic, Geographic, Institutional, Cultural)
 - `strength`: Magnitude of influence.
 - `direction`: Vector of change.
+- `linked_events`: Events influenced by this force.
 
 ### `Narrative` (The Lens)
 - `label`: Overarching interpretive frame (e.g., "The Security Dilemma").
-- `omissions`: What this narrative ignores relative to others.
+- `source_mapping`: Which outlets or actors promote this narrative.
+- `key_assertions`: The logical claims central to this view.
+- `omissions`: What this narrative ignores (cross-referenced against other narratives).
 
 ### `Gap` (The Unknowns)
-- What is explicitly missing from coverage?
+- `description`: What is explicitly missing from coverage.
+- `impact`: How significant is this missing data for understanding the whole.
+- `resolution_path`: What evidence would close this gap.
 
 ### Relationships
 - `PRECEDES` (Event -> Event)

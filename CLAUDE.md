@@ -22,10 +22,10 @@ The project is currently in the **design/planning phase** — no application cod
 
 Four core entities connected by typed relationships:
 
-- **Event** — Atomic facts with tiered detail: `title` (graph dot label) → `summary_short` (hover) → `summary_expanded` (panel) → `source_url` (evidence link)
-- **Structural Force** — Invisible drivers categorized as Economic, Demographic, Geographic, Institutional, or Cultural, with strength and direction
-- **Narrative** — An interpretive lens threading events/forces together; tracks `omissions` (what it ignores) cross-referenced against other narratives
-- **Gap** — Explicitly identified unknowns with impact assessment and resolution paths
+- **Event** — Atomic facts with tiered detail mapped to the 3-level reveal: `title` (**Glance**) → `summary_short` (**Context**) → `source_url` (**Evidence**). Also: `summary_expanded` (panel), optional `location`, `actors`, `evidence` list
+- **Structural Force** — Invisible drivers categorized as Economic, Demographic, Geographic, Institutional, or Cultural, with `strength`, `direction`, and `linked_events`
+- **Narrative** — An interpretive lens threading events/forces together; includes `source_mapping`, `key_assertions`, and `omissions` (cross-referenced against other narratives)
+- **Gap** — Explicitly identified unknowns with `description`, `impact` assessment, and `resolution_path`
 
 Relationships: `PRECEDES` (Event→Event), `INFLUENCES` (Force→Event), `CONTRADICTS` (Narrative→Narrative), `SUPPORTS` (Evidence→Assertion)
 
