@@ -11,15 +11,15 @@ graph LR
     P0 -->|Lucky| P1
     P1 -->|Swipe Left| P1L["P1L: Narrative A"]
     P1 -->|Swipe Right| P1R["P1R: Narrative B"]
-    P1 -->|Scroll Down| P2["P2: Chat"]
-    P2 -->|Scroll Up| P1
-    P1 -->|Scroll Up| P0
-    P1L -->|Swipe Up| P1
-    P1L -->|Swipe Left| P1R
+    P1 -->|Swipe Down| P2["P2: Chat"]
+    P1 -->|Swipe Up| P0
+    P1L -->|Swipe Right| P1
+    P1L -->|Swipe Up| P0
     P1L -->|Swipe Down| P2
-    P1R -->|Swipe Up| P1
-    P1R -->|Swipe Right| P1L
+    P1R -->|Swipe Left| P1
+    P1R -->|Swipe Up| P0
     P1R -->|Swipe Down| P2
+    P2 -->|Swipe Up| P1
 ```
 
 ---
@@ -43,13 +43,13 @@ graph LR
 ![P1L Narrative A](/Users/yonglinzhu/research/narrativeLab/docs/wireframes/wireframe_p1l_v3_1772228815230.png)
 - Story Graph with a clear vertical **timeline flow** (top to bottom)
 - Nodes branch off the central time axis
-- Swipe left → P1R | Swipe up → P1 | Swipe down → P2
+- Swipe right → P1 | Swipe up → P0 | Swipe down → P2
 <!-- slide -->
 ### P1R — Narrative B: Economic Competition
 ![P1R Narrative B](/Users/yonglinzhu/research/narrativeLab/docs/wireframes/wireframe_p1r_v3_1772228826741.png)
 - Story Graph with a clear vertical **timeline flow** (top to bottom)
 - Different narrative framing of the same events, differentiated by content
-- Swipe right → P1L | Swipe up → P1 | Swipe down → P2
+- Swipe left → P1 | Swipe up → P0 | Swipe down → P2
 <!-- slide -->
 ### P2 — Deep Dive Chat
 ![P2 Chat](/Users/yonglinzhu/research/narrativeLab/docs/wireframes/wireframe_p2_v2_1772227321380.png)

@@ -34,15 +34,21 @@ Relationships: `PRECEDES` (Event→Event), `INFLUENCES` (Force→Event), `CONTRA
 Mobile-first, gesture-driven navigation across 5 screens:
 
 ```
-P0 (Entry) → P1 (Summary Card)
-                ├── Swipe Left  → P1L (Narrative A: vertical timeline graph)
-                ├── Swipe Right → P1R (Narrative B: vertical timeline graph)
-                └── Scroll Down → P2  (Deep Dive Chat)
+                          Swipe Up
+                             ↑
+P1L (Narrative A) ← Swipe → P1 (Summary) ← Swipe → P1R (Narrative B)
+                             ↓
+                         Swipe Down
+                             ↓
+                      P2 (Deep Dive Chat)
+
+All three screens (P1L, P1, P1R) swipe up → P0, swipe down → P2.
+P0 (Entry) → Submit/Lucky → P1
 ```
 
 - **P0**: Minimalist search (text/URL/audio input) + "I'm Feeling Lucky" + history drawer
 - **P1**: Full-screen flashcard with summary image and neutral text
-- **P1L/P1R**: Interactive story graphs with 3-level node reveal (Glance → Context → Evidence). Swipe up → P1, swipe down → P2, swipe left (P1L) ↔ swipe right (P1R) to cross between narratives
+- **P1L/P1R**: Interactive story graphs with 3-level node reveal (Glance → Context → Evidence). P1L ↔ P1 ↔ P1R connected left/right; all swipe up → P0, swipe down → P2
 - **P2**: Contextual chat grounded in the narrative graph data
 
 ### Design System (Warm Editorial)
