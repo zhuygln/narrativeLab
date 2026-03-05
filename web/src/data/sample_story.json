@@ -1,0 +1,134 @@
+{
+  "id": "story-eu-ai-act",
+  "title": "The Road to the EU AI Act",
+  "description": "Tracing the key events, actors, and arguments that shaped the European Union's comprehensive AI legislation.",
+  "nodes": [
+    {
+      "id": "n1",
+      "type": "event",
+      "title": "Initial EC Proposal",
+      "date": "2021-04-21",
+      "summary": "European Commission proposes the first legal framework on AI.",
+      "lane": "Policy",
+      "sources": [
+        {
+          "publisher": "European Commission",
+          "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+          "date": "2021-04-21"
+        }
+      ]
+    },
+    {
+      "id": "n2",
+      "type": "event",
+      "title": "ChatGPT Launch",
+      "date": "2022-11-30",
+      "summary": "OpenAI releases ChatGPT, causing a global conversation shift toward generative AI.",
+      "lane": "Tech",
+      "sources": [
+        {
+          "publisher": "OpenAI Blog",
+          "url": "https://openai.com/blog/chatgpt",
+          "date": "2022-11-30"
+        }
+      ]
+    },
+    {
+      "id": "n3",
+      "type": "actor",
+      "title": "OpenAI Lobbying Effort",
+      "summary": "OpenAI allegedly lobbied the EU to soften regulations around General Purpose AI systems.",
+      "lane": "Market",
+      "sources": [
+        {
+          "publisher": "Time Magazine",
+          "url": "https://time.com/6289116/openai-eu-ai-act-lobbying/",
+          "date": "2023-06-20",
+          "quote_snippet": "OpenAI lobbied significant elements of the EU AI Act."
+        }
+      ]
+    },
+    {
+      "id": "n4",
+      "type": "event",
+      "title": "AI Act Parliament Vote",
+      "date": "2023-06-14",
+      "summary": "European Parliament adopts its negotiating position on the AI Act.",
+      "lane": "Policy",
+      "sources": [
+        {
+          "publisher": "European Parliament News",
+          "url": "https://www.europarl.europa.eu/news/en/press-room/20230609IPR96212/meps-ready-to-negotiate-first-ever-rules-for-safe-and-transparent-ai",
+          "date": "2023-06-14"
+        }
+      ]
+    },
+    {
+      "id": "n5",
+      "type": "claim",
+      "title": "Innovation vs Regulation",
+      "summary": "Critique that strict regulation will harm European tech companies' competitiveness.",
+      "lane": "Society",
+      "sources": [
+        {
+          "publisher": "Reuters",
+          "url": "https://www.reuters.com/technology/europe-ai-regulation-innovation-2023",
+          "date": "2023-06-30"
+        }
+      ]
+    },
+    {
+      "id": "n6",
+      "type": "event",
+      "title": "Final Agreement Reached",
+      "date": "2023-12-08",
+      "summary": "EU negotiators reach a provisional agreement on the Artificial Intelligence Act.",
+      "lane": "Policy",
+      "sources": [
+        {
+          "publisher": "Council of the EU",
+          "url": "https://www.consilium.europa.eu/en/press/press-releases/2023/12/09/artificial-intelligence-act-council-and-parliament-strike-a-deal-on-the-first-rules-for-ai-in-the-world/",
+          "date": "2023-12-08"
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "source": "n1",
+      "target": "n4",
+      "relation": "enables"
+    },
+    {
+      "id": "e2",
+      "source": "n2",
+      "target": "n3",
+      "relation": "causes"
+    },
+    {
+      "id": "e3",
+      "source": "n2",
+      "target": "n4",
+      "relation": "reacts_to"
+    },
+    {
+      "id": "e4",
+      "source": "n3",
+      "target": "n4",
+      "relation": "frames"
+    },
+    {
+      "id": "e5",
+      "source": "n5",
+      "target": "n4",
+      "relation": "contradicts"
+    },
+    {
+      "id": "e6",
+      "source": "n4",
+      "target": "n6",
+      "relation": "enables"
+    }
+  ]
+}

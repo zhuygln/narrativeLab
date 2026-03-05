@@ -1,42 +1,31 @@
-# Narrative Schema Proposal
+# Narrative Schema (Implemented)
 
-To build a "Narrative Graph Engine," we need an extensible data model. Here is a proposed schema:
+To build a "Narrative Graph Engine", we implemented an extensible data model in `web/schema/story.ts`. Here is the implemented schema:
 
-## 1. The Atomic Unit: `Event`
-- `id`: UUID
-- `timestamp`: ISO8601
-- `title`: Short label (for graph dot)
-- `summary_short`: Single-sentence overview (Level 1)
-- `summary_expanded`: Detailed context and analysis (Level 2)
-- `source_url`: Link to original evidence (Level 3)
-- `location`: GeoJSON or EntityID
-- `actors`: List of EntityIDs
-- `evidence`: List of links/references
+## 1. The Core `Node` structure
+- `id`: string
+- `type`: `event | actor | claim | policy | metric | evidence`
+- `title`: string
+- `date`: Optional ISO format string (primary layout driver for timelines)
+- `summary`: string
+- `lane`: `Policy | Market | Tech | Society | Info Ops | Context`
+- `sources`: Array of Source objects (url, publisher, date, quote_snippet)
+- `confidence`: Optional number (0-1)
 
-## 2. The Contextual Layer: `Structural Force`
-These are the "invisible hands" that drive events.
-- `category`: (Economic, Demographic, Geographic, Institutional, Cultural)
-- `strength`: (Magnitude of influence)
-- `direction`: (The vector of change)
-- `linked_events`: Events influenced by this force
+## 2. The Relationship `Edge`
+- `id`: string
+- `source`: string (Node ID)
+- `target`: string (Node ID)
+- `relation`: `causes | enables | reacts_to | contradicts | funds | benefits | frames`
+- `strength`: Optional number (0-1)
+- `evidence_ids`: Optional array of source IDs supporting the edge
 
-## 3. The Interpretive Layer: `Narrative`
-A narrative is a specific "threading" of events and forces.
-- `label`: (e.g., "The Security Dilemma", "The Resource Scarcity Frame")
-- `source_mapping`: Which outlets or actors promote this narrative?
-- `key_assertions`: The logical claims central to this view.
-- `omissions`: What this narrative ignores (automatically cross-referenced with other narratives).
-
-## 4. The Meta Layer: `Gap`
-- `description`: What do we not know yet?
-- `impact`: How significant is this missing data for understanding the whole?
-- `resolution_path`: What evidence would close this gap?
-
-## 5. Relationships
-- `PRECEDES` (Event -> Event)
-- `INFLUENCES` (Force -> Event)
-- `CONTRADICTS` (Narrative -> Narrative)
-- `SUPPORTS` (Evidence -> Assertion)
+## 3. The Encompassing `Story`
+- `id`: string
+- `title`: string
+- `description`: string
+- `nodes`: Array of Nodes
+- `edges`: Array of Edges
 
 ---
 ### Example Mockup: The "Energy Transition" Story System

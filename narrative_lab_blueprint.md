@@ -83,12 +83,13 @@ The core interaction is a mobile-first, gesture-driven flow designed for rapid p
 ### Tech Stack
 - **Platform**: Responsive Web App (Next.js App Router). 
   - *Note: Designed mobile-first. Can be wrapped as PWA or via Capacitor later for native iOS/Android.*
-- **Graph Visualization**: `React Flow` or `D3.js` for the interactive P1L/P1R story timelines.
-- **Styling**: Vanilla CSS + Framer Motion (for smooth swipe transitions).
+- **UI Orchestration**: `framer-motion` for fluid P0 -> P1 -> P1L/R swipe gestures.
+- **Graph Visualization**: `D3.js` for the interactive P1L (Vertical) and P1R (Horizontal) timelines in `<NarrativeCanvas/>`.
+- **Styling**: Tailwind CSS configured for a Warm Editorial aesthetic (Ivory background, Playfair Display fonts, Earth-tone graph nodes).
 
 ### Storage Strategy
-- **Relational/Graph Storage**: Postgres (Supabase) to store the relationships between Events and Forces, along with the tiered strings (`summary_short`, `summary_expanded`, `source_url`).
-- **Vector Storage**: For semantic search and storing larger chunks of evidence (via pgvector).
+- **Data Model**: MVP stores flat JSON using strict TypeScript definitions (`schema/story.ts`).
+- **Relational/Graph Storage**: Future implementation via Postgres (Supabase) to store node relationships and vector embeddings.
 
 ### [POSTPONED] AI Orchestration Pipeline
-*Note: AI agent workflows (Extraction, Contextualization, Narrative Modeling, Gap Detection) are postponed for the MVP. We will focus strictly on manual curation of the data model and nailing the P0-P2 UI experience first.*
+*Note: AI agent workflows (Extraction, Contextualization, Narrative Modeling, Gap Detection) are postponed for the MVP. We have initially focused strictly on manual curation of the data model and nailing the P0-P2 UI experience.*
